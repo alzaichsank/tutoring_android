@@ -46,8 +46,7 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            app:leftIcon="@drawable/ic_vec_password" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
@@ -59,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_text_password"
-        app:leftIcon="@drawable/ic_vec_password" />
+         />
 
 <!--    <id.tandigital.mitratel.common.view.input.TextField-->
 <!--        android:id="@+id/et_password"-->
