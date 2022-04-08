@@ -1,7 +1,7 @@
 package id.alik.tutor_android.tutordesign
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.R
 
 class TrainingDesignActivity : AppCompatActivity() {
