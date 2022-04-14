@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tutordesign.TrainingDesignActivity">
-
-   <FrameLayout
-       android:id="@+id/frame_layout"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+    tools:context=".tutordesign.intentlearning.IntentFirstActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
