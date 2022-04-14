@@ -10,18 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tutor_android">
         <activity
+            android:name=".tutordesign.intentlearning.IntentSecondsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tutordesign.intentlearning.IntentFirstActivity"
+            android:exported="false" />
+        <activity
             android:name=".tutordesign.TrainingDesignActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
