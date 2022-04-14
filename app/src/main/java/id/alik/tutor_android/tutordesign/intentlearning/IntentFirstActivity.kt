@@ -1,12 +1,33 @@
 package id.alik.tutor_android.tutordesign.intentlearning
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import id.alik.tutor_android.R
+import androidx.appcompat.app.AppCompatActivity
+import id.alik.tutor_android.databinding.ActivityIntentFirstBinding
 
 class IntentFirstActivity : AppCompatActivity() {
+    private lateinit var mBinding: ActivityIntentFirstBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intent_first)
+        mBinding = ActivityIntentFirstBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+        setUpView()
+    }
+
+    private fun setUpView() {
+        with(mBinding) {
+            btnIntent.setOnClickListener {
+
+            }
+            btnIntentBundle.setOnClickListener {
+
+            }
+            btnIntentSerializable.setOnClickListener { }
+
+            btnIntentParcelabel.setOnClickListener {
+
+            }
+
+
+        }
     }
 }
