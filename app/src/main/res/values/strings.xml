@@ -2,6 +2,10 @@
     <string name="app_name">tutor_android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--main-->
+    <string name="title_main">Selamat Datang \n silahkan pilih case latihan</string>
+    <string name="button_go_to_intent">Intent Case</string>
+    <!--intent case-->
     <string name="button_intent">Intent</string>
     <string name="button_intent_bundle">Bundle Intent</string>
     <string name="button_intent_serializable">Serializable Intent</string>
