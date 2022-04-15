@@ -1,4 +1,4 @@
-package id.alik.tutor_android.tutordesign.intentlearning.model
+package id.alik.tutor_android.presenter.tutordesign.intentlearning.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

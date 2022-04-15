@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tutor_android">
         <activity
-            android:name=".MainActivity"
+            android:name=".presenter.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +18,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".tutordesign.intentlearning.IntentSecondsActivity"
+            android:name=".presenter.tutordesign.intentlearning.IntentSecondsActivity"
             android:exported="false" />
         <activity
-            android:name=".tutordesign.intentlearning.IntentFirstActivity"
+            android:name=".presenter.tutordesign.intentlearning.IntentFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".tutordesign.TrainingDesignActivity"
+            android:name=".presenter.tutordesign.TrainingDesignActivity"
             android:exported="true" />
     </application>
 
