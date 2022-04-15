@@ -3,6 +3,7 @@ package id.alik.tutor_android.tutordesign.intentlearning
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentFirstBinding
+import id.alik.tutor_android.tutordesign.intentlearning.model.PersonIntent
 
 class IntentFirstActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityIntentFirstBinding
@@ -35,6 +36,13 @@ class IntentFirstActivity : AppCompatActivity() {
     private fun setUpData(type: String) {
         when (type) {
             INTENT_EXTRA -> {
+                val person = PersonIntent(
+                    nama = "Alza Ichsan Kurnaiwan",
+                    email = "useremail@mail.com",
+                    umur = 25,
+                    domisili = "Bogor",
+                    statusMenikah = true
+                )
                 //TODO add case for intent
             }
             BUNDLE_EXTRA -> {

@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/bg_button_intent.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/bg_button_primary.xml" value="0.1185" />
         <entry key="app/src/main/res/layout/activity_dummy.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_intent_first.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_training_design.xml" value="0.19610507246376813" />
       </map>
     </option>
