@@ -1,4 +1,4 @@
-package id.alik.tutor_android.tutordesign.intentlearning
+package id.alik.tutor_android.presenter.tutordesign.intentlearning
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

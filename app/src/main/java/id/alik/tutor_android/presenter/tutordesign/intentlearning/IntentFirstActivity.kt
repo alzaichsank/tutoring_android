@@ -1,9 +1,9 @@
-package id.alik.tutor_android.tutordesign.intentlearning
+package id.alik.tutor_android.presenter.tutordesign.intentlearning
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentFirstBinding
-import id.alik.tutor_android.tutordesign.intentlearning.model.PersonIntent
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
 
 class IntentFirstActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityIntentFirstBinding
