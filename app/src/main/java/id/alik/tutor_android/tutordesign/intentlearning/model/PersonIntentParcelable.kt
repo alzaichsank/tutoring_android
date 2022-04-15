@@ -9,5 +9,5 @@ data class PersonIntentParcelable(
     var umur: Int,
     var email: String,
     var domisili: String,
-    var statusMenikah: String,
+    var statusMenikah: Boolean,
 ) : Parcelable
