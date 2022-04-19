@@ -3,6 +3,7 @@ package id.alik.tutor_android.service
 import android.app.Activity
 import android.content.Intent
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentFirstActivity
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity
 
 
 class NavigationService {
@@ -11,8 +12,13 @@ class NavigationService {
         context.startActivity(intent)
     }
 
-    fun showIntentSecondCase(context: Activity) {
-        //TODO : add intent on this
+    fun showIntentSecondCase(context: Activity,type : String, data : Any) {
+        val intent = Intent(context, IntentSecondsActivity::class.java).apply {
+            when(type){
+                //TODO : add condition based on type
+            }
+        }
+        context.startActivity(intent)
     }
 
 
