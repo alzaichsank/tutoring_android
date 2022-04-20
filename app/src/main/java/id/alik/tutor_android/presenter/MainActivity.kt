@@ -35,7 +35,10 @@ class MainActivity : AppCompatActivity() {
                 TUTOR_VIEW_PAGER -> {
                     //TODO : ADD intent
                 }
-                TUTOR_EDIT_TEX ->{
+                TUTOR_EDIT_TEXT ->{
+                    //TODO : ADD intent
+                }
+                TUTOR_NAVIGATION_COMPONENT ->{
                     //TODO : ADD intent
                 }
             }
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     private companion object {
         const val TUTOR_INTENT = "Tutor Intent"
         const val TUTOR_VIEW_PAGER = "Tutor View Pager"
-        const val TUTOR_EDIT_TEX = "Tutor Edit Text"
+        const val TUTOR_EDIT_TEXT = "Tutor Edit Text"
+        const val TUTOR_NAVIGATION_COMPONENT = "Tutor navigation component"
     }
 }
