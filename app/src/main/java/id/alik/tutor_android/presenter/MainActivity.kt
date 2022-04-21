@@ -38,6 +38,9 @@ class MainActivity : AppCompatActivity() {
                 TUTOR_EDIT_TEXT ->{
                     //TODO : ADD intent
                 }
+                TUTOR_DIALOG ->{
+                    //TODO : ADD intent
+                }
                 TUTOR_NAVIGATION_COMPONENT ->{
                     //TODO : ADD intent
                 }
@@ -55,5 +58,6 @@ class MainActivity : AppCompatActivity() {
         const val TUTOR_VIEW_PAGER = "Tutor View Pager"
         const val TUTOR_EDIT_TEXT = "Tutor Edit Text"
         const val TUTOR_NAVIGATION_COMPONENT = "Tutor navigation component"
+        const val TUTOR_DIALOG = "Tutor dialog"
     }
 }
