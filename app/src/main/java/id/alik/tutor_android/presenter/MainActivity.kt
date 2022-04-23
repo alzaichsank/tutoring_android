@@ -44,6 +44,9 @@ class MainActivity : AppCompatActivity() {
                 TUTOR_NAVIGATION_COMPONENT ->{
                     //TODO : ADD intent
                 }
+                TUTOR_ROOM ->{
+                    //TODO : add intent implicit to the app or if not installed show the repo
+                }
             }
         }
 
@@ -59,5 +62,7 @@ class MainActivity : AppCompatActivity() {
         const val TUTOR_EDIT_TEXT = "Tutor Edit Text"
         const val TUTOR_NAVIGATION_COMPONENT = "Tutor navigation component"
         const val TUTOR_DIALOG = "Tutor dialog"
+        const val TUTOR_ROOM = "Tutor room"
+
     }
 }
