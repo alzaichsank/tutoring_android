@@ -8,6 +8,7 @@ import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsA
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_EMAIL
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_NAME
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_STATUS
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_TYPE_INTENT
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_UMUR
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
 
@@ -28,6 +29,7 @@ class NavigationService {
                         putExtra(INTENT_EXTRA_EMAIL, data.email)
                         putExtra(INTENT_EXTRA_DOMISILI, data.domisili)
                         putExtra(INTENT_EXTRA_STATUS, data.statusMenikah)
+                        putExtra(INTENT_EXTRA_TYPE_INTENT, type)
                     }
                 }
             }

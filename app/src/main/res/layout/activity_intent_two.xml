@@ -13,7 +13,7 @@
         android:layout_margin="@dimen/dimens_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Nama : Kucing Tamvan"/>
+        tools:text="Nama : Kucing Tamvan" />
 
     <TextView
         android:id="@+id/tv_age"
@@ -22,7 +22,8 @@
         android:layout_margin="@dimen/dimens_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name"
-        tools:text="Umur : Kucing Tamvan"/>
+        tools:text="Umur : Kucing Tamvan" />
+
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="wrap_content"
@@ -30,7 +31,7 @@
         android:layout_margin="@dimen/dimens_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_age"
-        tools:text="Email : Kucing Tamvan"/>
+        tools:text="Email : Kucing Tamvan" />
 
     <TextView
         android:id="@+id/tv_address"
@@ -39,7 +40,7 @@
         android:layout_margin="@dimen/dimens_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_email"
-        tools:text="Domisili : Kucing Tamvan"/>
+        tools:text="Domisili : Kucing Tamvan" />
 
     <TextView
         android:id="@+id/tv_marriage"
@@ -48,7 +49,7 @@
         android:layout_margin="@dimen/dimens_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_address"
-        tools:text="Status Menikah : Kucing Tamvan"/>
+        tools:text="Status Menikah : Kucing Tamvan" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
