@@ -4,13 +4,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentFirstBinding
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
+import id.alik.tutor_android.service.NavigationService
 
 class IntentFirstActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityIntentFirstBinding
+    private var navigationService: NavigationService? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityIntentFirstBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        navigationService = NavigationService()
         setUpView()
     }
 
@@ -43,7 +46,7 @@ class IntentFirstActivity : AppCompatActivity() {
                     domisili = "Bogor",
                     statusMenikah = true
                 )
-                //TODO add case for intent
+                navigationService?.showIntentSecondCase(this@IntentFirstActivity,INTENT_EXTRA,person)
             }
             BUNDLE_EXTRA -> {
                 //TODO add case for bundle

@@ -63,6 +63,5 @@ class MainActivity : AppCompatActivity() {
         const val TUTOR_NAVIGATION_COMPONENT = "Tutor navigation component"
         const val TUTOR_DIALOG = "Tutor dialog"
         const val TUTOR_ROOM = "Tutor room"
-
     }
 }

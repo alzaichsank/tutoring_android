@@ -4,6 +4,12 @@ import android.app.Activity
 import android.content.Intent
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentFirstActivity
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_DOMISILI
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_EMAIL
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_NAME
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_STATUS
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_UMUR
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
 
 
 class NavigationService {
@@ -12,10 +18,18 @@ class NavigationService {
         context.startActivity(intent)
     }
 
-    fun showIntentSecondCase(context: Activity,type : String, data : Any) {
+    fun showIntentSecondCase(context: Activity, type: String, data: Any) {
         val intent = Intent(context, IntentSecondsActivity::class.java).apply {
-            when(type){
-                //TODO : add condition based on type
+            when (type) {
+                IntentFirstActivity.INTENT_EXTRA -> {
+                    (data as PersonIntent).apply {
+                        putExtra(INTENT_EXTRA_NAME, data.nama)
+                        putExtra(INTENT_EXTRA_UMUR, data.umur)
+                        putExtra(INTENT_EXTRA_EMAIL, data.email)
+                        putExtra(INTENT_EXTRA_DOMISILI, data.domisili)
+                        putExtra(INTENT_EXTRA_STATUS, data.statusMenikah)
+                    }
+                }
             }
         }
         context.startActivity(intent)
