@@ -2,6 +2,7 @@ package id.alik.tutor_android.service
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Bundle
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentFirstActivity
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_DOMISILI
@@ -30,6 +31,19 @@ class NavigationService {
                         putExtra(INTENT_EXTRA_DOMISILI, data.domisili)
                         putExtra(INTENT_EXTRA_STATUS, data.statusMenikah)
                         putExtra(INTENT_EXTRA_TYPE_INTENT, type)
+                    }
+                }
+                IntentFirstActivity.BUNDLE_EXTRA -> {
+                    val bundle = Bundle()
+                    (data as PersonIntent).apply {
+                        bundle.apply {
+                            putString(INTENT_EXTRA_NAME, data.nama)
+                            putInt(INTENT_EXTRA_UMUR, data.umur)
+                            putString(INTENT_EXTRA_EMAIL, data.email)
+                            putString(INTENT_EXTRA_DOMISILI, data.domisili)
+                            putBoolean(INTENT_EXTRA_STATUS, data.statusMenikah)
+                            putExtra(INTENT_EXTRA_TYPE_INTENT, type)
+                        }
                     }
                 }
             }

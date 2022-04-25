@@ -37,20 +37,26 @@ class IntentFirstActivity : AppCompatActivity() {
     }
 
     private fun setUpData(type: String) {
+        val person = PersonIntent(
+            nama = "Alza Ichsan Kurnaiwan",
+            email = "useremail@mail.com",
+            umur = 25,
+            domisili = "Bogor",
+            statusMenikah = true
+        )
         when (type) {
-            INTENT_EXTRA -> {
-                val person = PersonIntent(
-                    nama = "Alza Ichsan Kurnaiwan",
-                    email = "useremail@mail.com",
-                    umur = 25,
-                    domisili = "Bogor",
-                    statusMenikah = true
+            INTENT_EXTRA ->
+                navigationService?.showIntentSecondCase(
+                    this@IntentFirstActivity,
+                    INTENT_EXTRA,
+                    person
                 )
-                navigationService?.showIntentSecondCase(this@IntentFirstActivity,INTENT_EXTRA,person)
-            }
-            BUNDLE_EXTRA -> {
-                //TODO add case for bundle
-            }
+            BUNDLE_EXTRA ->
+                navigationService?.showIntentSecondCase(
+                    this@IntentFirstActivity,
+                    BUNDLE_EXTRA,
+                    person
+                )
             SERIALIZABELE_EXTRA -> {
                 //TODO add case for serializabele
             }
