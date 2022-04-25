@@ -62,6 +62,44 @@ class IntentSecondsActivity : AppCompatActivity() {
                             }
                         }".also { marriageStatus = it }
                     }
+                    IntentFirstActivity.BUNDLE_EXTRA -> {
+                        "Nama : ${
+                            intentExtras.getString(
+                                INTENT_EXTRA_NAME,
+                                ""
+                            )
+                        }".also { name = it }
+                        "Umur : ${
+                            intentExtras.getInt(
+                                INTENT_EXTRA_UMUR,
+                                0
+                            )
+                        }".also { age = it }
+                        "Email : ${
+                            intentExtras.getString(
+                                INTENT_EXTRA_EMAIL,
+                                ""
+                            )
+                        }".also { email = it }
+                        "Alamat : ${
+                            intentExtras.getString(
+                                INTENT_EXTRA_DOMISILI,
+                                ""
+                            )
+                        }".also { address = it }
+                        "Status Menikah : ${
+                            if (intentExtras.getBoolean(
+                                    INTENT_EXTRA_STATUS,
+                                    false
+                                )
+                            ) {
+                                "Sudah Menikah"
+                            } else {
+                                "Belum Menikah"
+                            }
+                        }".also { marriageStatus = it }
+
+                    }
                 }
 
                 setViewData()

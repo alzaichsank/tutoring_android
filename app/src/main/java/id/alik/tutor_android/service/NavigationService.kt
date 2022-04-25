@@ -45,6 +45,7 @@ class NavigationService {
                             putExtra(INTENT_EXTRA_TYPE_INTENT, type)
                         }
                     }
+                    putExtras(bundle)
                 }
             }
         }
