@@ -21,90 +21,86 @@ class IntentSecondsActivity : AppCompatActivity() {
     }
 
     private fun checkIntent() {
-        with(mBinding) {
-            val intentExtras = intent.extras
-            if (intentExtras != null) {
-                when (intentExtras.getString(INTENT_EXTRA_TYPE_INTENT)) {
-                    IntentFirstActivity.INTENT_EXTRA -> {
-                        "Nama : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_NAME,
-                                ""
-                            )
-                        }".also { name = it }
-                        "Umur : ${
-                            intentExtras.getInt(
-                                INTENT_EXTRA_UMUR,
-                                0
-                            )
-                        }".also { age = it }
-                        "Email : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_EMAIL,
-                                ""
-                            )
-                        }".also { email = it }
-                        "Alamat : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_DOMISILI,
-                                ""
-                            )
-                        }".also { address = it }
-                        "Status Menikah : ${
-                            if (intentExtras.getBoolean(
-                                    INTENT_EXTRA_STATUS,
-                                    false
-                                )
-                            ) {
-                                "Sudah Menikah"
-                            } else {
-                                "Belum Menikah"
-                            }
-                        }".also { marriageStatus = it }
-                    }
-                    IntentFirstActivity.BUNDLE_EXTRA -> {
-                        "Nama : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_NAME,
-                                ""
-                            )
-                        }".also { name = it }
-                        "Umur : ${
-                            intentExtras.getInt(
-                                INTENT_EXTRA_UMUR,
-                                0
-                            )
-                        }".also { age = it }
-                        "Email : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_EMAIL,
-                                ""
-                            )
-                        }".also { email = it }
-                        "Alamat : ${
-                            intentExtras.getString(
-                                INTENT_EXTRA_DOMISILI,
-                                ""
-                            )
-                        }".also { address = it }
-                        "Status Menikah : ${
-                            if (intentExtras.getBoolean(
-                                    INTENT_EXTRA_STATUS,
-                                    false
-                                )
-                            ) {
-                                "Sudah Menikah"
-                            } else {
-                                "Belum Menikah"
-                            }
-                        }".also { marriageStatus = it }
+        val intent = intent
+        if (intent != null) {
+            when (intent.getStringExtra(INTENT_EXTRA_TYPE_INTENT)) {
+                IntentFirstActivity.INTENT_EXTRA -> {
+                    mappingDataIntentCase()
+                }
+                IntentFirstActivity.BUNDLE_EXTRA -> {
+                    if (intent.extras != null) {
+                        mappingDataBundleCase(intent.extras!!)
 
                     }
                 }
-
-                setViewData()
             }
+            setViewData()
         }
+    }
+
+    private fun mappingDataIntentCase() {
+        setVariableData(
+            nameData = intent.getStringExtra(
+                INTENT_EXTRA_NAME
+            ).toString(),
+            ageData = intent.getIntExtra(
+                INTENT_EXTRA_UMUR, 0
+            ).toString(),
+            emailData = intent.getStringExtra(
+                INTENT_EXTRA_EMAIL
+            ).toString(),
+            addressData = intent.getStringExtra(
+                INTENT_EXTRA_DOMISILI
+            ).toString(),
+            marriageStatusData = intent.getBooleanExtra(
+                INTENT_EXTRA_STATUS, false
+            )
+        )
+    }
+
+    private fun mappingDataBundleCase(intentExtras: Bundle) {
+        setVariableData(
+            nameData = intentExtras.getString(
+                INTENT_EXTRA_NAME,
+                ""
+            ),
+            ageData = intentExtras.getInt(
+                INTENT_EXTRA_UMUR,
+                0
+            ).toString(),
+            emailData = intentExtras.getString(
+                INTENT_EXTRA_EMAIL,
+                ""
+            ),
+            addressData = intentExtras.getString(
+                INTENT_EXTRA_DOMISILI,
+                ""
+            ),
+            marriageStatusData = intentExtras.getBoolean(
+                INTENT_EXTRA_STATUS,
+                false
+            )
+        )
+    }
+
+    private fun setVariableData(
+        nameData: String,
+        ageData: String,
+        emailData: String,
+        addressData: String,
+        marriageStatusData: Boolean
+    ) {
+        name = "Nama : $nameData"
+        age = "Umur : $ageData"
+        email = "Email : $emailData"
+        address = "Alamat : $addressData"
+        marriageStatus = "Status Menikah : ${
+            if (marriageStatusData) {
+                "Sudah Menikah"
+            } else {
+                "Belum Menikah"
+            }
+        }"
     }
 
     private fun setViewData() {
@@ -116,7 +112,6 @@ class IntentSecondsActivity : AppCompatActivity() {
             tvMarriage.text = marriageStatus
         }
     }
-
 
     companion object {
         const val INTENT_EXTRA_NAME = "intent.key.name"
