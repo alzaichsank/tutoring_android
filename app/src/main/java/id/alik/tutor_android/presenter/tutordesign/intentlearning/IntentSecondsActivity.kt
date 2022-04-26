@@ -3,6 +3,8 @@ package id.alik.tutor_android.presenter.tutordesign.intentlearning
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentTwoBinding
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
+import id.alik.tutor_android.service.NavigationService
 
 
 class IntentSecondsActivity : AppCompatActivity() {
@@ -30,8 +32,10 @@ class IntentSecondsActivity : AppCompatActivity() {
                 IntentFirstActivity.BUNDLE_EXTRA -> {
                     if (intent.extras != null) {
                         mappingDataBundleCase(intent.extras!!)
-
                     }
+                }
+                IntentFirstActivity.SERIALIZABELE_EXTRA -> {
+                    mappingDataSerializabeleCase()
                 }
             }
             setViewData()
@@ -80,6 +84,18 @@ class IntentSecondsActivity : AppCompatActivity() {
                 INTENT_EXTRA_STATUS,
                 false
             )
+        )
+    }
+
+    private fun mappingDataSerializabeleCase() {
+        val data =
+            intent.getSerializableExtra(NavigationService.INTENT_EXTRA_DATA) as PersonIntentSerializable
+        setVariableData(
+            nameData = data.nama,
+            ageData = data.umur.toString(),
+            emailData = data.email,
+            addressData = data.domisili,
+            marriageStatusData = data.statusMenikah
         )
     }
 
