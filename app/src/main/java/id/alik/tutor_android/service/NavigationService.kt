@@ -12,6 +12,7 @@ import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsA
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_TYPE_INTENT
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_UMUR
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
 
 
 class NavigationService {
@@ -46,6 +47,10 @@ class NavigationService {
                         }
                     }
                     putExtras(bundle)
+                }
+                IntentFirstActivity.SERIALIZABELE_EXTRA -> {
+                    putExtra(INTENT_EXTRA_DATA, data as PersonIntentSerializable)
+                    putExtra(INTENT_EXTRA_TYPE_INTENT, type)
                 }
             }
         }
