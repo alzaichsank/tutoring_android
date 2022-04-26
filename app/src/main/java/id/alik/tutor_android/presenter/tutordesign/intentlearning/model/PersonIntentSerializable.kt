@@ -2,7 +2,7 @@ package id.alik.tutor_android.presenter.tutordesign.intentlearning.model
 
 import java.io.Serializable
 
-class PersonIntentSerializable(
+data class PersonIntentSerializable(
     var nama: String,
     var umur: Int,
     var email: String,
