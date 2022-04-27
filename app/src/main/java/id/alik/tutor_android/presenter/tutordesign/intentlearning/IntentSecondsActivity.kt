@@ -3,6 +3,7 @@ package id.alik.tutor_android.presenter.tutordesign.intentlearning
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentTwoBinding
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentParcelable
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
 import id.alik.tutor_android.service.NavigationService
 
@@ -35,7 +36,10 @@ class IntentSecondsActivity : AppCompatActivity() {
                     }
                 }
                 IntentFirstActivity.SERIALIZABELE_EXTRA -> {
-                    mappingDataSerializabeleCase()
+                    mappingDataSerializableCase()
+                }
+                IntentFirstActivity.PARCELABEL_EXTRA -> {
+                    mappingDataParcelableCase()
                 }
             }
             setViewData()
@@ -87,7 +91,7 @@ class IntentSecondsActivity : AppCompatActivity() {
         )
     }
 
-    private fun mappingDataSerializabeleCase() {
+    private fun mappingDataSerializableCase() {
         val data =
             intent.getSerializableExtra(NavigationService.INTENT_EXTRA_DATA) as PersonIntentSerializable
         setVariableData(
@@ -97,6 +101,20 @@ class IntentSecondsActivity : AppCompatActivity() {
             addressData = data.domisili,
             marriageStatusData = data.statusMenikah
         )
+    }
+
+    private fun mappingDataParcelableCase() {
+        val data =
+            intent.getParcelableExtra<PersonIntentParcelable>(NavigationService.INTENT_EXTRA_DATA)
+        if (data != null) {
+            setVariableData(
+                nameData = data.nama,
+                ageData = data.umur.toString(),
+                emailData = data.email,
+                addressData = data.domisili,
+                marriageStatusData = data.statusMenikah
+            )
+        }
     }
 
     private fun setVariableData(
