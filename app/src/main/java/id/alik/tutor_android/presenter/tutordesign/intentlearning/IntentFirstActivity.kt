@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.alik.tutor_android.databinding.ActivityIntentFirstBinding
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentParcelable
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
 import id.alik.tutor_android.service.NavigationService
 
@@ -62,17 +63,31 @@ class IntentFirstActivity : AppCompatActivity() {
                 navigationService?.showIntentSecondCase(
                     this@IntentFirstActivity,
                     SERIALIZABELE_EXTRA,
-                    mapperPersonToPersonSerializabele(person)
+                    mapperPersonToPersonSerializable(person)
                 )
             }
             PARCELABEL_EXTRA -> {
-                //TODO add case for parcelable
+                navigationService?.showIntentSecondCase(
+                    this@IntentFirstActivity,
+                    PARCELABEL_EXTRA,
+                    mapperPersonToPersonParcelable(person)
+                )
             }
         }
     }
 
-    private fun mapperPersonToPersonSerializabele(person: PersonIntent): PersonIntentSerializable {
+    private fun mapperPersonToPersonSerializable(person: PersonIntent): PersonIntentSerializable {
         return PersonIntentSerializable(
+            nama = person.nama,
+            email = person.email,
+            umur = person.umur,
+            domisili = person.domisili,
+            statusMenikah = person.statusMenikah
+        )
+    }
+
+    private fun mapperPersonToPersonParcelable(person: PersonIntent): PersonIntentParcelable {
+        return PersonIntentParcelable(
             nama = person.nama,
             email = person.email,
             umur = person.umur,
