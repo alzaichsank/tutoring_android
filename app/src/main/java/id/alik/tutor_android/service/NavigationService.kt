@@ -12,6 +12,7 @@ import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsA
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_TYPE_INTENT
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsActivity.Companion.INTENT_EXTRA_UMUR
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
+import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentParcelable
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
 
 
@@ -23,6 +24,7 @@ class NavigationService {
 
     fun showIntentSecondCase(context: Activity, type: String, data: Any) {
         val intent = Intent(context, IntentSecondsActivity::class.java).apply {
+            putExtra(INTENT_EXTRA_TYPE_INTENT, type)
             when (type) {
                 IntentFirstActivity.INTENT_EXTRA -> {
                     (data as PersonIntent).apply {
@@ -31,7 +33,6 @@ class NavigationService {
                         putExtra(INTENT_EXTRA_EMAIL, data.email)
                         putExtra(INTENT_EXTRA_DOMISILI, data.domisili)
                         putExtra(INTENT_EXTRA_STATUS, data.statusMenikah)
-                        putExtra(INTENT_EXTRA_TYPE_INTENT, type)
                     }
                 }
                 IntentFirstActivity.BUNDLE_EXTRA -> {
@@ -43,14 +44,15 @@ class NavigationService {
                             putString(INTENT_EXTRA_EMAIL, data.email)
                             putString(INTENT_EXTRA_DOMISILI, data.domisili)
                             putBoolean(INTENT_EXTRA_STATUS, data.statusMenikah)
-                            putExtra(INTENT_EXTRA_TYPE_INTENT, type)
                         }
                     }
                     putExtras(bundle)
                 }
                 IntentFirstActivity.SERIALIZABELE_EXTRA -> {
                     putExtra(INTENT_EXTRA_DATA, data as PersonIntentSerializable)
-                    putExtra(INTENT_EXTRA_TYPE_INTENT, type)
+                }
+                IntentFirstActivity.PARCELABEL_EXTRA -> {
+                    putExtra(INTENT_EXTRA_DATA, data as PersonIntentParcelable)
                 }
             }
         }
