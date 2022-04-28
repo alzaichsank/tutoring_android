@@ -1,16 +1,16 @@
-package id.alik.tutor_android.presenter.tutordesign
+package id.alik.tutor_android.presenter.tutordesign.viewpager
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import id.alik.tutor_android.R
 
-class TrainingDesignActivity : AppCompatActivity() {
+class ViewPagerActivity : AppCompatActivity() {
 
     private var fragmentTransaction : FragmentTransaction?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_training_design)
+        setContentView(R.layout.activity_view_pager)
         setUpView()
     }
 
