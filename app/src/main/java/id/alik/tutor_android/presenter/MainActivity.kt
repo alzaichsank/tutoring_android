@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         demoListAdapter = DemoListAdapter(
             arrayListOf(
                 TUTOR_INTENT,
-                TUTOR_VIEW_PAGER
+                TUTOR_INTRO_PAGE
             )
         )
         { tutorName ->
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 TUTOR_INTENT -> {
                     navigationService?.showIntentCase(this@MainActivity)
                 }
-                TUTOR_VIEW_PAGER -> {
+                TUTOR_INTRO_PAGE -> {
                     //TODO : ADD intent
                 }
                 TUTOR_EDIT_TEXT ->{
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
     private companion object {
         const val TUTOR_INTENT = "Tutor Intent"
-        const val TUTOR_VIEW_PAGER = "Tutor View Pager"
+        const val TUTOR_INTRO_PAGE = "Tutor intro Page"
         const val TUTOR_EDIT_TEXT = "Tutor Edit Text"
         const val TUTOR_NAVIGATION_COMPONENT = "Tutor navigation component"
         const val TUTOR_DIALOG = "Tutor dialog"

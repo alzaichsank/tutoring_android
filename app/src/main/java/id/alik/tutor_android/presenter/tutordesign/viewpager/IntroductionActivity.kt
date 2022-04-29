@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import id.alik.tutor_android.R
 
-class ViewPagerActivity : AppCompatActivity() {
+class IntroductionActivity : AppCompatActivity() {
 
     private var fragmentTransaction : FragmentTransaction?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_pager)
+        setContentView(R.layout.activity_introduction)
         setUpView()
     }
 
