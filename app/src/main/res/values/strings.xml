@@ -13,4 +13,8 @@
     <string name="button_intent_parcelabel">Parcelabel Intent</string>
 
     <string name="test_intent">Exercise Intent \nIntent\nBundle\nSerializable\nParcelabel</string>
+
+    <string name="text_btn_back">Back</string>
+    <string name="text_btn_next">Next</string>
+    <string name="text_btn_finish">Finish</string>
 </resources>

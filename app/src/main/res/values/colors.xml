@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FEF100</color>
-    <color name="colorAccent">#1B75BB</color>
-    <color name="colorPrimaryDark">#E6F9FF</color>
+    <color name="colorPrimary">#B72F35</color>
+    <color name="colorPrimaryVariant">#FF4D4D</color>
+    <color name="colorAccent">#F7BA79</color>
     <color name="colorNavigationMaps">#4e8bbf</color>
     <color name="colorLogo">#FEF200</color>
 
@@ -13,4 +13,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorBtnIndicatorSecondary">#4DB72F35</color>
+    <color name="colorBackgroundTab">#E8DCCC</color>
+    <color name="colorBtnDisable">#E7E7E7</color>
 </resources>
