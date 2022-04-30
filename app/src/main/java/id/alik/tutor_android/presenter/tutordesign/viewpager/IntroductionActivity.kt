@@ -3,24 +3,25 @@ package id.alik.tutor_android.presenter.tutordesign.viewpager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
-import id.alik.tutor_android.R
+import id.alik.tutor_android.databinding.ActivityIntroductionBinding
 
 class IntroductionActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityIntroductionBinding
 
-    private var fragmentTransaction : FragmentTransaction?= null
+    private var fragmentTransaction: FragmentTransaction? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_introduction)
+        binding = ActivityIntroductionBinding.inflate(layoutInflater)
         setUpView()
     }
 
-    private fun setUpView(){
+    private fun setUpView() {
         setFragmentTransaction()
 //        fragmentTransaction.add(R.id.frame_layout,SlideFragment)
     }
 
-    private fun setFragmentTransaction(){
+    private fun setFragmentTransaction() {
         val fragmentManager = supportFragmentManager
-        fragmentTransaction  = fragmentManager.beginTransaction()
+        fragmentTransaction = fragmentManager.beginTransaction()
     }
 }
