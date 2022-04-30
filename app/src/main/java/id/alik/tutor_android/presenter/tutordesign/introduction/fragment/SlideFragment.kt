@@ -22,9 +22,12 @@ class SlideFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(param1: String, param2: String) =
-            SlideFragment().apply {
-
+        private const val PAGE = "bundle.extra.page"
+        fun newInstance(page: Int): SlideFragment {
+            val newFragment = SlideFragment().apply {
+                arguments = Bundle().apply { putInt(PAGE, page) }
             }
+            return newFragment
+        }
     }
 }
