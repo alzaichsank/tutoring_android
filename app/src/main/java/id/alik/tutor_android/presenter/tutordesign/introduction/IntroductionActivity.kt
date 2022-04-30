@@ -1,4 +1,4 @@
-package id.alik.tutor_android.presenter.tutordesign.viewpager
+package id.alik.tutor_android.presenter.tutordesign.introduction
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

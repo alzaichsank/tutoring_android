@@ -24,7 +24,7 @@
             android:name=".presenter.tutordesign.intentlearning.IntentFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".presenter.tutordesign.viewpager.IntroductionActivity"
+            android:name=".presenter.tutordesign.introduction.IntroductionActivity"
             android:exported="true" />
     </application>
 

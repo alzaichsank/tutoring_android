@@ -1,4 +1,4 @@
-package id.alik.tutor_android.presenter.tutordesign.viewpager.fragment
+package id.alik.tutor_android.presenter.tutordesign.introduction.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
