@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import id.alik.tutor_android.base.makeGone
+import id.alik.tutor_android.base.makeVisible
 import id.alik.tutor_android.databinding.FragmentSlideBinding
 import id.alik.tutor_android.presenter.tutordesign.introduction.adapter.IntroductionAdapter
 
@@ -33,18 +35,24 @@ class SlideFragment : Fragment() {
     private fun setUpView() {
         when (mPage) {
             IntroductionAdapter.FIRST -> {
-                view.apply {
-
+                binding.apply {
+                    introductionOne.root.makeVisible()
+                    introductionTwo.root.makeGone()
+                    introductionThree.root.makeGone()
                 }
             }
             IntroductionAdapter.SECOND -> {
-                view.apply {
-
+                binding.apply {
+                    introductionOne.root.makeGone()
+                    introductionTwo.root.makeVisible()
+                    introductionThree.root.makeGone()
                 }
             }
             IntroductionAdapter.LAST -> {
-                view.apply {
-
+                binding.apply {
+                    introductionOne.root.makeGone()
+                    introductionTwo.root.makeGone()
+                    introductionThree.root.makeVisible()
                 }
             }
         }
