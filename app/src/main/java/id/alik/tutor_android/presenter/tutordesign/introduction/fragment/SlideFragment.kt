@@ -14,10 +14,6 @@ class SlideFragment : Fragment() {
     private var mPage: Int = 0
     private lateinit var binding: FragmentSlideBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -2,7 +2,6 @@ package id.alik.tutor_android.presenter.tutordesign.introduction
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager.widget.ViewPager
 import id.alik.tutor_android.R
 import id.alik.tutor_android.base.makeDisable
@@ -16,7 +15,6 @@ class IntroductionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIntroductionBinding
     private var adapterPosition = 0
 
-    private var fragmentTransaction: FragmentTransaction? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityIntroductionBinding.inflate(layoutInflater)

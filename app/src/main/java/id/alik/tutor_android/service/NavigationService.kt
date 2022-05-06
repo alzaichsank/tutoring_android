@@ -14,9 +14,15 @@ import id.alik.tutor_android.presenter.tutordesign.intentlearning.IntentSecondsA
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntent
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentParcelable
 import id.alik.tutor_android.presenter.tutordesign.intentlearning.model.PersonIntentSerializable
+import id.alik.tutor_android.presenter.tutordesign.introduction.IntroductionActivity
 
 
 class NavigationService {
+    fun showIntroductionCase(context: Activity) {
+        val intent = Intent(context, IntroductionActivity::class.java)
+        context.startActivity(intent)
+    }
+
     fun showIntentCase(context: Activity) {
         val intent = Intent(context, IntentFirstActivity::class.java)
         context.startActivity(intent)

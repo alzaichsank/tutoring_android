@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                     navigationService?.showIntentCase(this@MainActivity)
                 }
                 TUTOR_INTRO_PAGE -> {
-                    //TODO : ADD intent
+                    navigationService?.showIntroductionCase(this@MainActivity)
                 }
                 TUTOR_EDIT_TEXT ->{
                     //TODO : ADD intent
