@@ -1,5 +1,6 @@
 package id.alik.tutor_android.presenter.tutordesign.introduction.adapter
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -17,7 +18,10 @@ class IntroductionAdapter(fragmentManager: FragmentManager) :
 
     override fun getCount(): Int = fragments.count()
 
-    override fun getItem(position: Int): Fragment = fragments[position]
+    override fun getItem(position: Int): Fragment {
+        Log.d("cek", "onCreate: Fragment > $position")
+        return fragments[position]
+    }
 
     companion object {
         const val FIRST = 0

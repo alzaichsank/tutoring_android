@@ -1,6 +1,7 @@
 package id.alik.tutor_android.presenter.tutordesign.introduction
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import id.alik.tutor_android.R
@@ -23,27 +24,30 @@ class IntroductionActivity : AppCompatActivity() {
 
     private fun setUpView() {
         binding.apply {
-            vpSlider.apply {
-                adapter = IntroductionAdapter(supportFragmentManager)
-                currentItem = 0
-
-                val viewPagerPageChangeListener: ViewPager.OnPageChangeListener =
-                    object : ViewPager.OnPageChangeListener {
-                        override fun onPageSelected(position: Int) {
-                            adapterPosition = position
-                            setViewEachPage(position)
-                        }
-
-                        override fun onPageScrolled(arg0: Int, arg1: Float, arg2: Int) = Unit
-
-                        override fun onPageScrollStateChanged(arg0: Int) = Unit
-                    }
-                addOnPageChangeListener(viewPagerPageChangeListener)
-            }
-            tabIndicator.setupWithViewPager(vpSlider, true)
+//            vpSlider.apply {
+//                adapter = IntroductionAdapter(supportFragmentManager)
+//                currentItem = 0
+//                setViewEachPage(adapterPosition)
+//                Log.d("cek", "onCreate: currentItem > $currentItem")
+//                val viewPagerPageChangeListener: ViewPager.OnPageChangeListener =
+//                    object : ViewPager.OnPageChangeListener {
+//                        override fun onPageSelected(position: Int) {
+//                            adapterPosition = position
+//                            Log.d("cek", "onCreate: adapterPosition > $adapterPosition")
+//                            setViewEachPage(position)
+//                        }
+//
+//                        override fun onPageScrolled(arg0: Int, arg1: Float, arg2: Int) = Unit
+//
+//                        override fun onPageScrollStateChanged(arg0: Int) = Unit
+//                    }
+//                addOnPageChangeListener(viewPagerPageChangeListener)
+//            }
+            setViewEachPage(adapterPosition)
+//            tabIndicator.setupWithViewPager(vpSlider, true)
             btnNext.setOnClickListener {
                 val isLastPage: Boolean
-                val position = if (adapterPosition < IntroductionAdapter.SECOND) {
+                val position = if (adapterPosition < IntroductionAdapter.LAST) {
                     isLastPage = false
                     adapterPosition + 1
                 } else {
@@ -58,8 +62,9 @@ class IntroductionActivity : AppCompatActivity() {
                 } else {
                     adapterPosition
                 }
-                vpSlider.currentItem = position
+//                vpSlider.currentItem = position
             }
+
         }
     }
 
@@ -67,11 +72,12 @@ class IntroductionActivity : AppCompatActivity() {
         if (lastPage) {
             //TODO : go to home or main
         } else {
-            binding.vpSlider.currentItem = position
+//            binding.vpSlider.currentItem = position
         }
     }
 
     private fun setViewEachPage(selectedPosition: Int) {
+        Log.d("cek", "onCreate: selectedPosition > $selectedPosition")
         binding.apply {
             when (selectedPosition) {
                 IntroductionAdapter.FIRST -> {
@@ -88,6 +94,9 @@ class IntroductionActivity : AppCompatActivity() {
                     btnNext.text = getString(R.string.text_btn_finish)
                     btnBack.makeVisible()
                     btnBack.makeEnable()
+                }
+                else ->{
+                    Log.d("cek", "onCreate: IntroductionAdapter position > $selectedPosition")
                 }
             }
         }

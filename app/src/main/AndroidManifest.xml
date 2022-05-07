@@ -25,7 +25,8 @@
             android:exported="false" />
         <activity
             android:name=".presenter.tutordesign.introduction.IntroductionActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
     </application>
 
 </manifest>
