@@ -20,4 +20,5 @@
 
     <!--general string place holder-->
     <string name="lorem_dummy_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat diam, id senectus pellentesque. Risus a, aliquet egestas velit, justo ultrices dictumst nec. Et id egestas fames a purus scelerisque eget. Viverra ut habitasse feugiat feugiat et dignissim ac.</string>
+    <string name="text_btn_finish_dummy">Finish one</string>
 </resources>
